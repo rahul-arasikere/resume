@@ -42,6 +42,8 @@
 
 \usepackage{moresize} % Provides more font size commands (\HUGE and \ssmall)
 
+\usepackage[dvipsnames]{xcolor}
+
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT
 %----------------------------------------------------------------------------------------
@@ -80,9 +82,9 @@
 
 \usepackage{fontawesome} % Required for FontAwesome icons
 
-% Command to output an icon in a black square box with text to the right
+% Command to output an icon in a RoyalBlue square box with text to the right
 \newcommand{\icon}[3]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	\vcenteredhbox{\colorbox{black}{\makebox(#2, #2){\textcolor{white}{\large\csname fa#1\endcsname}}}}% Icon and box
+	\vcenteredhbox{\colorbox{RoyalBlue}{\makebox(#2, #2){\textcolor{white}{\large\csname fa#1\endcsname}}}}% Icon and box
 	\hspace{0.2cm}% Whitespace
 	\vcenteredhbox{\textcolor{black}{#3}}% Text
 }
@@ -127,9 +129,9 @@
 		\pgfmathparse{(\barwidth*\thebarcount)+(\barsep*\thebarcount)}
 		\let\barx\pgfmathresult
 		
-		\filldraw[fill=black, draw=none] (0,-\barx) rectangle (\barone,-\barx-\barwidth);
+		\filldraw[fill=RoyalBlue, draw=none] (0,-\barx) rectangle (\barone,-\barx-\barwidth);
 		
-		\node [label=180:\colorbox{black}{\textcolor{white}{##1}}] at (0,-\barx-0.175) {};
+		\node [label=180:\colorbox{RoyalBlue}{\textcolor{white}{##1}}] at (0,-\barx-0.175) {};
 		\addtocounter{barcount}{1}
 	}
 	\begin{tikzpicture}
@@ -160,8 +162,8 @@
 
 % Command to output a bubble at a specific position with a specific size
 \newcommand{\bubble}[5]{
-	\filldraw[fill=black, draw=none] (#1,0.5) circle (#3); % Bubble
-	\node[label=\textcolor{black}{#4}] at (#1,0.7) {}; % Label
+	\filldraw[fill=RoyalBlue, draw=none] (#1,0.5) circle (#3); % Bubble
+	\node[label=\textcolor{RoyalBlue}{#4}] at (#1,0.7) {}; % Label
 }
 
 %----------------------------------------------------------------------------------------
@@ -171,7 +173,7 @@
 % Command to output section title headings
 \newcommand{\cvsect}[1]{% The only parameter is the section text
 	\vspace{\baselineskip} % Whitespace before the section title
-	\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}\\% Section title
+	\colorbox{RoyalBlue}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}\\% Section title
 }
 
 %----------------------------------------------------------------------------------------
